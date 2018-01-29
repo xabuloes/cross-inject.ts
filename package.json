@@ -1,0 +1,34 @@
+{
+  "name": "cross-inject.ts",
+  "version": "0.0.1",
+  "description": "Suite for common low-level service interfaces & implementations for TypeScript backend applications (best used with Inversify).",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./test/**/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xabuloes/cross-inject.ts.git"
+  },
+  "author": "Fabian Roth <fdroth@web.de> (http://fabulo.es/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xabuloes/cross-inject.ts/issues"
+  },
+  "homepage": "https://github.com/xabuloes/cross-inject.ts#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/inversify": "^2.0.33",
+    "@types/mocha": "^2.2.47",
+    "chai": "^4.1.2",
+    "inversify": "^4.10.0",
+    "mocha": "^5.0.0",
+    "mocha-typescript": "^1.1.12",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.12"
+  }
+}
