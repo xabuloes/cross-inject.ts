@@ -12,14 +12,14 @@ export class ConsoleLoggerService implements LoggerService {
         return Promise.resolve();
     }
 
-    warning(toLog: string, additionalData?: any): Promise<void> {
+    public warning(toLog: string, additionalData?: any): Promise<void> {
 
         console.warn(toLog);
 
         return Promise.resolve();
     }
 
-    error(toLog: string, additionalData?: any): Promise<void> {
+    public error(toLog: string, additionalData?: any): Promise<void> {
 
         console.error(toLog);
 
