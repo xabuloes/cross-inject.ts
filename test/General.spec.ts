@@ -4,15 +4,16 @@ import {ConsoleLoggerService} from "../lib/ts/logger/classes/ConsoleLoggerServic
 import {Container, inject, injectable} from "inversify";
 import "reflect-metadata";
 
+
+const container: Container = new Container({defaultScope: "Singleton", autoBindInjectable: true});
+
+container.bind<LoggerService>("logger").to(ConsoleLoggerService);
+
 @suite
 class Test {
 
     @test
     public testGeneralDependencyInjection(): void {
-
-        const container: Container = new Container();
-
-        container.bind<LoggerService>("logger").to(ConsoleLoggerService);
 
         @injectable()
         class TestApp {
